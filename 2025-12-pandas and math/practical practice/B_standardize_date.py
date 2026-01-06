@@ -10,7 +10,7 @@ def standardize_date(df, date_col="date"):
     """
     #统一日期类型
     df_clean = df.copy()
-    df_clean[date_col] = pd.to_datetime(df_clean[date_col], error='coerce')
+    df_clean[date_col] = pd.to_datetime(df_clean[date_col], errors='coerce')
 
     #剔除无效日期
     invalid_date_count = df_clean[date_col].isnull().sum()
@@ -29,7 +29,7 @@ def standardize_date(df, date_col="date"):
 
     #剔除非交易日
     df_clean['Week'] = df_clean[date_col].dt.dayofweek
-    non_trading_day_count = df_clean[df_clean['Week' >= 5].shape[0]]
+    non_trading_day_count = df_clean[df_clean['Week'] >= 5].shape[0]
     if non_trading_day_count > 0:
         print(f"剔除非交易日记录 {non_trading_day_count} 条") 
         df_clean = df_clean[df_clean['Week'] < 5].reset.index(drop=True)
