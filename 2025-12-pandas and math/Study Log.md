@@ -299,3 +299,23 @@
   - 了解tushare 老牌财经接口包
   - warings python的警告处理库
   - warning.filterwarning('ignore) 会忽略警告 不是报错
+## 1-8
+1. 学期项目
+  - load_dotenv() 将本地文件.env 中的配置信息传到python中
+  - datetime.now() 返回本地时间datetime strfitme是前面的专属方法 将datetime转化为指定格式字符串
+  - bs的login（）返回error_code 0和error_msg success为成功 当登录失败error_msg返回错误原因
+  - while (rs.error_code == '0') & rs.next() 同时满足即没有报错 和下一行有内容
+  - pd.concat() 合并表格和向量ignore_index=True 重置行索引
+  - apply() 对选中的每一列（或每一行）应用指定的函数
+  - pd.to_numeric() 自动识别数字格式并转化 errors='coerce' 则不报错转为NaN ='raise' 直接报错 ='ignore' 不处理
+  - 初步了解PE市盈率 以当前股价买入 靠公司的盈利 多少年能回本 
+  - PB市净率 以当前股价买入 付出的价格是公司账面净资产的多少倍 
+  - 换手率 当天有多少比例的流通股被换手交易了
+  - pd.rename(改名的行或列=字典，inplace=true直接修改源文件)
+2. MIT
+  - 正交是垂直的一种说法在n维空间两个向量的夹角为90度
+  - 判断条件为X^y=0 对于x的平法 做法是x的装置与x相乘
+  - 子空间正交，即两个子空间的所有向量正交
+  - 行空间正交零空间 列空间正交转置零空间
+  - 无论在R^n R^m中都有正交补
+  - Ax=b A^t A x=A^t b 中的x是最优解 N(A^tA)=N(A)
