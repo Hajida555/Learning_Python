@@ -388,3 +388,10 @@
   - plt.plot折线图(水平反向数据，垂直数据，label=图的名字,color=颜色,linewidth=折线的大小)
   - title标题 xlabel横轴说明 ylabel竖轴说明 legend图例 fontsize字体大小 grid(True添加网格线，alpha透明度 xticks(rotation=45) 旋转x轴字体45度 tight_layout()自动优化 plt.show(block=False) 让显示的图表不堵塞程序运行
   - .pct_change() 计算相邻数据变化的百分比 
+2. mit
+  - 行列式值=求和负n!+-a1j+a2j+a3j……anj
+  - 代数余子式选择行列式某一行或列考虑所有可能性并相加即去掉选择的ji，剩余组成的行列式，当i+j是偶数时符号是正反之为负
+  - 代数余子式|An| = |An-1| - |An-2| A^-1 = 1/行列式值 C^T 其中C是伴随矩阵即原矩阵的代数余子式还是由n-1个元素组成的矩阵
+  - AC^T = 对角线为行列式值的单位矩阵 原矩阵的行乘以代数余子式并相加=行列式的值
+  - Ax=b x=A^-1 b = 1/detA C^T b xj = detBj/detA detBj = 沿第j列为b的代数余子式相加
+  - 平行四边形面积ad-bc 三角形是一半
