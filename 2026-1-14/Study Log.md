@@ -27,4 +27,22 @@
  - 应该避免在命名时与关键字重名 标识符可以含有字母 数字和下划线 只能字母和下划线开头 标识符是对函数，变量等实体的命名
  - 常量使用全大写命名和下划线 即宏定义 #define 
  - scanf调用int整数型("%d", &x) float浮点型("%f", &x) x为标识符
- - 对变量可以在开头进行初始化 一个变量只能对应一个值 
+ - 对变量可以在开头进行初始化 一个变量只能对应一个值
+3. 《利用python数据分析》
+ - merge(df，要链接的df，on=指定的列)没有指定默认是重复的列名 默认是都有的索引
+ - 可以通过left_on= 和 right_on=  指定左右df列名 how=inner/outer 指定并集 交集  
+ - 可以通过left_index= 和 right_index= 指定左右df的行索引链接 对于多层次索引 必须以列表指明多个列
+ - 左表格df.join(右表格)类似于merge的索引合并 但是不可以有重复的列名 更类似合并
+ - np数组使用concatenate合并运算 pd则是使用concat([df/series]/如果是字典则是键,axis=改变合并方向，join=类似merge传入inner得交集，keys=创建层次索引) 合并默认是并集
+ - np.where(判断条件，条件为t时取的值 df/se，f时取的值)
+## 1-16
+1. 宋浩概率论
+ - 条件概率的样本空间是发生变化的，在已经发生的事件A概率上B发生的概率即P(B|A)
+2. 《利用python数据分析》
+ - stack将列换成行 unstack将行换成列 
+ - 对于多层次的索引df 传入level=固定索引
+ - 转化缺失值要会默认提出 保留future_stack=True
+ - PeriodIndex.from_fields 传入年份和季度转化为pd的period格式 to_timestamp("D/Y/M/H") 转化为具体的时间点 日/年/月/小时
+ - .pop删除数据列 reset_index()将行标签转化为列 df.piovt(index=列标签,columns=从表格中选择行标签,values=值)
+ - melt宽表格转化为长表格 id_vars指定保留标签 value_vars需要拆分标签
+ - plt.plot（df）绘制折线图
