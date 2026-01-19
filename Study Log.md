@@ -471,3 +471,14 @@
  - horizontalalignment=文字的水平对齐方式 verticalalignment=文字的垂直对齐方式
  - savefig("保存文件的名字") rc改全局配置 
  - pd有对df和se的处理图表工具 类似plt plt.style.use('grayscale')将绘图风格切换为 “灰度模式”
+## 1-19
+1. 《利用python数据分析》
+ - .plot.bar 垂直柱状图 .barh 水平柱状图 对于df 会对每一行分组
+ - barh(stacked=True堆积) 
+ - pd.crosstab（数据） 计算出现频次返回df div 正态化
+ - seaborn sns.barplot（x=，y=， data=，orient=h指定条形图的方向为水平， hue=额外的分类数值
+ - sns.set_style(改变网格类似)palette(改变整体的风格)
+ - hist 直方图 类似 density 密度图 反应数值出现的频次 
+ - concatenate将数据列表合并
+ - np.diff 后一个数 - 前一个数 
+ - regplot（） 生成散点图 并添加一条线性回归拟合的直线 sns.pairplot(df拿表格里的每一列其他所有列两两配对，diag_kind=默认对角是直方图可以通过这个参数修改，plot_kws=修改非对角线的图)  
